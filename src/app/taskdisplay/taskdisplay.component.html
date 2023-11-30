@@ -14,7 +14,7 @@
             <button (click)="deleteTask(task.id)">Delete</button>
         </div>
       </div>
-      <div *ngIf="editingTask !== null && editingTask.id === task.id">
+      <div *ngIf="editingTask !== null && editingTask.id === task.id" class="taskdisplay__new">
         <label for="editTitle">Title:</label>
         <input id="editTitle" name="editTitle" [(ngModel)]="editingTask.title" />
         <label for="editDescription">Description:</label>

@@ -5,7 +5,7 @@
     background: transparent;
     backdrop-filter: blur(20px);
     border: 1px solid rgb(247, 81, 81);
-    max-width: 700px;
+    max-width: 800px;
     border-radius: 20px;
     margin:  auto;
     button{
@@ -26,5 +26,22 @@
         transform: scale(1.1);
         font-size: 15px;
     }
-    
+    input{
+        padding: 10px;
+        background-color: lightgray;
+        border-radius: 10px;
+        width: 280px;
+    }
+    textarea{
+        padding: 10px;
+        width: 280px;
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+    &__new{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
 }
