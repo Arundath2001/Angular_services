@@ -1,0 +1,41 @@
+.taskinsert{
+    padding: 50px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    max-width: 400px;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 1px solid rgb(246, 81, 81);
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    input{
+        padding: 10px;
+        background-color: lightgray;
+        border-radius: 10px;
+        width: 280px;
+    }
+    textarea{
+        padding: 10px;
+        width: 280px;
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+    button{
+        width: 100px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 13px;
+        background-image: linear-gradient(to right, #f083cf, #ff8faa, #ffad89, #ffd37b, #f1f88f);
+
+    }
+    button:hover{
+        transform: scale(1.1);
+        font-size: 15px;
+    }
+}

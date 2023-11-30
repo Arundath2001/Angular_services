@@ -1,0 +1,27 @@
+<div class="taskdisplay">
+    <h2>Task List</h2>
+    <div *ngFor="let task of tasks">
+      <div  class="taskdisplay__cont" *ngIf="editingTask === null || editingTask.id !== task.id">
+        <div>
+            <h5>Title:</h5>
+            {{ task.title }}
+            <h5>Description:</h5>
+            {{ task.description }}
+        </div>
+    
+        <div class="taskdisplay__btn">
+            <button (click)="editTask(task)">Edit</button>
+            <button (click)="deleteTask(task.id)">Delete</button>
+        </div>
+      </div>
+      <div *ngIf="editingTask !== null && editingTask.id === task.id">
+        <label for="editTitle">Title:</label>
+        <input id="editTitle" name="editTitle" [(ngModel)]="editingTask.title" />
+        <label for="editDescription">Description:</label>
+        <textarea id="editDescription" name="editDescription" [(ngModel)]="editingTask.description"></textarea>
+        <button (click)="updateTask()">Update</button>
+        <button (click)="deleteTask(editingTask.id)">Delete</button>
+      </div>
+    </div>
+</div>
+  
